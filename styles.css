@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --color-primary100: hsl(225, 100%, 94%);
+    --color-primary200: hsl(245, 75%, 52%);
+
+    --color-neutral100: hsl(225, 100%, 98%);
+    --color-neutral200: hsl(224, 23%, 55%);
+    --color-neutral300: hsl(223, 47%, 23%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: .8rem;
+
+    background-image: url('images/pattern-background-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: var(--color-primary100);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h4 {
+    color: var(--color-neutral300);
+}
+
+h1, h4, a {
+    font-weight: 900;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.primary-button, .secondary-button {
+    border-radius: .5rem;
+    border: none;
+
+    padding: 1rem 3rem;
+    
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: var(--color-primary200);
+    color: var(--color-neutral100);
+}
+
+.primary-button:hover {
+    background-color: var(--color-neutral200);
+}
+
+.secondary-button, p {
+    background-color: transparent;
+    color: var(--color-neutral200);
+}
+
+.secondary-button:hover {
+    color: var(--color-neutral300);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+section {
+    background-color: white;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-rows: 1fr 40% 1fr;
+    place-items: center;
+    gap: .7rem;
+
+    width: min(80%, 20rem);
+}
+
+.hero {
+    height: 100%;
+}
+
+.hero img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1rem 1rem 0 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.card-info {
+    text-align: center;
+}
+
+.card-offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.offer-logo img {
+    object-fit: cover;
+    width: 80%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 50em) {
+    body {
+        font-size: 1rem;
+
+        background-image: url('images/pattern-background-desktop.svg');
+    }
+}
